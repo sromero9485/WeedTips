@@ -1,0 +1,17 @@
+{
+  "head": "refs/heads/master",
+  "staged": "mebgc1fvtp411phaih64sevkf99da3kf",
+  "working": "mebgc1fvtp411phaih64sevkf99da3kf",
+  "merge": null,
+  "remotes": {
+    "origin": {
+      "name": "origin",
+      "url": "https://doltremoteapi.dolthub.com/Liquidata/marijuana-data",
+      "fetch_specs": [
+        "refs/heads/*:refs/remotes/origin/*"
+      ],
+      "params": {}
+    }
+  },
+  "branches": {}
+}
