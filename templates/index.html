@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF=8">
+	<title>l</title>
+</head>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<body>
+<div class="container">
+
+<form id='submit_params' method="POST" action="{{ url_for('main') }}">
+<div class="form-group">
+<table class="table">
+    <tr>
+    <p style="text-align:center">   
+        <td width="300px"><p style="text-align:center"><h1>Weed Tip</h1></p></td>
+        <td><p style="text-align:center">
+	</p>
+		</td>
+        <td width="200px"><p style="text-align:center"><h3>Medical Marihuana</h3></p></td>
+    </tr>
+    <tr>
+        <td>
+            <table class="table" border=0 >
+                <tr>
+                    <td><label for="male">Condición 1</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_condition1">
+				          <option value="{{s_condition1}}" selected>{{s_condition1}}</option>
+				          <option>Stress</option>
+				          <option>Depression</option>
+						  <option>Insomnia</option>
+						  <option>Nausea</option>
+						  <option>Inflamation </option>
+						  <option>Muscle spasms</option>
+						  <option>Seizures</option>
+						  <option>Anxiety</option>
+						  <option>Lack of apetite</option>
+				      </SELECT>
+					</td>
+                </tr>
+                <tr>
+                    <td><label for="male">Condición 2</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_condition2">
+				          <option value="{{s_condition2}}" selected>{{s_condition2}}</option>
+				          <option>Stress</option>
+				          <option>Depression</option>
+						  <option>Insomnia</option>
+						  <option>Nausea</option>
+						  <option>Inflamation </option>
+						  <option>Muscle spasms</option>
+						  <option>Seizures</option>
+						  <option>Anxious</option>
+						  <option>Lack of apetite</option>
+                </tr>
+                <tr>
+                    <td><label for="male">Efecto 1</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_efecto1">
+				          <option value="{{s_efecto1}}" selected>{{s_efecto1}}</option>
+				          <option>Happy</option>
+				          <option>Dry Mouth</option>
+						  <option>Relaxed</option>
+						  <option>Euphoric</option>
+						  <option>Uplifted </option>
+						  <option>Paranoid</option>
+						  <option>Sleepy</option>
+						  <option>Creative</option>
+						  <option>Energetic</option>
+						  <option>Hungry</option>
+						  <option>Focus</option>
+						  <option>Tingly</option>
+						  <option>Talkative</option>
+						  <option>Horny</option>
+				</tr>
+				<tr>
+                    <td><label for="male">Efecto 2</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_efecto2">
+				          <option value="{{s_efecto2}}" selected>{{s_efecto2}}</option>
+				          <option>Happy</option>
+				          <option>Dry Mouth</option>
+						  <option>Relaxed</option>
+						  <option>Euphoric</option>
+						  <option>Uplifted </option>
+						  <option>Paranoid</option>
+						  <option>Sleepy</option>
+						  <option>Creative</option>
+						  <option>Energetic</option>
+						  <option>Hungry</option>
+						  <option>Focus</option>
+						  <option>Tingly</option>
+						  <option>Talkative</option>
+						  <option>Horny</option>
+				</tr>
+				<tr>
+                    <td><label for="male">Efecto 3</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_efecto3">
+				          <option value="{{s_efecto3}}" selected>{{s_efecto3}}</option>
+				          <option>Happy</option>
+				          <option>Dry Mouth</option>
+						  <option>Relaxed</option>
+						  <option>Euphoric</option>
+						  <option>Uplifted </option>
+						  <option>Paranoid</option>
+						  <option>Sleepy</option>
+						  <option>Creative</option>
+						  <option>Energetic</option>
+						  <option>Hungry</option>
+						  <option>Focus</option>
+						  <option>Tingly</option>
+						  <option>Talkative</option>
+						  <option>Horny</option>
+				</tr>
+				<tr>
+                    <td><label for="male">Efecto 4</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_efecto4">
+				          <option value="{{s_efecto4}}" selected>{{s_efecto4}}</option>
+				          <option>Happy</option>
+				          <option>Dry Mouth</option>
+						  <option>Relaxed</option>
+						  <option>Euphoric</option>
+						  <option>Uplifted </option>
+						  <option>Paranoid</option>
+						  <option>Sleepy</option>
+						  <option>Creative</option>
+						  <option>Energetic</option>
+						  <option>Hungry</option>
+						  <option>Focus</option>
+						  <option>Tingly</option>
+						  <option>Talkative</option>
+						  <option>Horny</option>
+				</tr>
+                <tr>
+                    <td><label for="male">Sabor 1</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_flavor1">
+				          <option value="{{s_flavor1}}" selected>{{s_flavor1}}</option>
+				          <option>Earthy</option>
+				          <option>Sweet</option>
+						  <option>Citrus</option>
+						  <option>Berry</option>
+						  <option>Pine </option>
+						  <option>Lemon</option>
+						  <option>Grape</option>
+						  <option>Blueberry</option>
+						  <option>Lime</option>
+						  <option>Orange</option>
+						  <option>Mango</option>
+						  <option>Pineapple</option>
+						  <option>Lavender</option>
+						  <option>epper</option>
+				</tr>
+				<tr>
+                    <td><label for="male">Sabor 2</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_flavor2">
+				          <option value="{{s_flavor2}}" selected>{{s_flavor2}}</option>
+				          <option>Earthy</option>
+				          <option>Sweet</option>
+						  <option>Citrus</option>
+						  <option>Berry</option>
+						  <option>Pine </option>
+						  <option>Lemon</option>
+						  <option>Grape</option>
+						  <option>Blueberry</option>
+						  <option>Lime</option>
+						  <option>Orange</option>
+						  <option>Mango</option>
+						  <option>Pineapple</option>
+						  <option>Lavender</option>
+						  <option>Pepper</option>
+				</tr>
+				<tr>
+                    <td><label for="male">Sabor 3</label></td>
+                    <td>
+                     <SELECT class="selectpicker" name="s_flavor3">
+				          <option value="{{s_flavor3}}" selected>{{s_flavor3}}</option>
+				          <option>Earthy</option>
+				          <option>Sweet</option>
+						  <option>Citrus</option>
+						  <option>Berry</option>
+						  <option>Pine </option>
+						  <option>Lemon</option>
+						  <option>Grape</option>
+						  <option>Blueberry</option>
+						  <option>Lime</option>
+						  <option>Orange</option>
+						  <option>Mango</option>
+						  <option>Pineapple</option>
+						  <option>Lavender</option>
+						  <option>Pepper</option>
+				</tr>
+
+          </table>
+
+        </td>
+
+        <td>{{model_results}}
+        </td>
+        <td>
+        	<p style="text-align:center">Weed</p>
+        	<p style="text-align:center">
+			<img src="static/images//med-marijuana.imgcache.rev873985b7234d2a2df9a09f5cefacea57.png" alt="cabin locations" style='padding:1px; border:1px solid #021a40; width: 100%; height: 100%'>
+			</p></td>
+    </tr>
+    <td><button class="btn btn-default" type="submit" style="width: 100px; height: 30px;">Get high!</button></td><td></td><td></td>
+    <tr>
+</table>
+</div>
+</form>
+
+</div>
+</body>
+</html>
