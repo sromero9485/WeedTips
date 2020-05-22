@@ -18,8 +18,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 # necesario en pythonanywhere
 PATH=os.path.dirname(os.path.abspath(__file__))
-    
-# default inicial
+#data=genfromtxt(PATH+'/data/data_weed.csv', delimiter=',') # fuera de jupyter    
+
 
 Condicion1='Stress'
 Condicion2='Depression'
@@ -48,9 +48,9 @@ app=Flask(__name__)
 # antes del primer request...
 @app.before_first_request
 def startup():
-    global tasa_media, logreg
     
-    data=genfromtxt(PATH+'/data/data_weed.csv', delimiter=',') # fuera de jupyter
+    
+    data=pd.read_csv(PATH+'/data/data_weed.csv') # fuera de jupyter
     
     matrix1 = tf.fit_transform(data['EFA'])   
     nn.fit(matrix1)  # se entrena una vez antes de arrancar
@@ -294,7 +294,7 @@ def main():
         if (s_flavor2 == 'Pineapple'):
             ideal_strain.append('Pineapple')
         if (s_flavor2 == 'Lavender'):
-            ideal_strain.append('Lavender'
+            ideal_strain.append('Lavender')
 
          #Flavor3
         if (s_flavor3 == 'Earthy'):
@@ -324,7 +324,7 @@ def main():
         if (s_flavor3 == 'Pineapple'):
             ideal_strain.append('Pineapple')
         if (s_flavor3 == 'Lavender'):
-            ideal_strain.append('Lavender'
+            ideal_strain.append('Lavender')
             
             
         
@@ -336,22 +336,25 @@ def main():
         
         name = [data['name'][results[1][0][i]] for i in range(5)]
         EFA = [data['EFA'][results[1][0][i]] for i in range(5)]
-        thc = [data['thc_input'][results[1][0][i]] for i in range(5)]
+        thc = str([data['thc_input'][results[1][0][i]] for i in range(5)])
         typ = [data['type'][results[1][0][i]] for i in range(5)]
 
     
-        recommend1 = name[0] + ' - ' + typ[0] + ' - ' + EFA[0] +' - ' + thc[0]
-        recommend2 = name[1] + ' - ' + typ[1] + ' - ' + EFA[1] +' - ' + thc[1]
-        recommend3 = name[2] + ' - ' + typ[2] + ' - ' + EFA[2] +' - ' + thc[2]
-        recommend4 = name[3] + ' - ' + typ[3] + ' - ' + EFA[3] +' - ' + thc[3]
-        recommend5 = name[4] + ' - ' + typ[4] + ' - ' + EFA[4] +' - ' + thc[4]
+        recommend1 = name[0] + ' --- ' + typ[0] + ' --- ' + EFA[0] 
+        
+        recommend2 = name[1] + ' --- ' + typ[1] + ' --- ' + EFA[1]
+        
+        recommend3 = name[2] + ' --- ' + typ[2] + ' --- ' + EFA[2]
+        
+        recommend4 = name[3] + ' --- ' + typ[3] + ' - ' + EFA[3]
+        
+        recommend5 = name[4] + ' --- ' + typ[4] + ' --- ' + EFA[4]
 
-        return render_template('index.html', 
-            model_results = recommend1, 
-                        recommend2,
-                        recommend3, 
-                        recommend4, 
-                        recommend5)
+        return render_template('index.html', model_results1 = ['Recomendation 1 -',recommend1],
+                                            model_results2 = ['Recomendation 2 -',recommend2],
+                                            model_results3 = ['Recomendation 3 -',recommend3],
+                                            model_results4 = ['Recomendation 4 -',recommend4],
+                                            model_results5 = ['Recomendation 5 -',recommend5])
             
         
         
@@ -360,17 +363,12 @@ def main():
         return render_template('index.html',
             model_results = '',
             s_condition1=Condicion1,
-            s_condition1=Condicion1,
+            s_condition2=Condicion2,
             s_efecto1=Efecto1,
-            s_efecto2=GEfecto2,
+            s_efecto2=Efecto2,
             s_efecto3=Efecto3,
             s_efecto4=Efecto4,
             s_flavor1=Sabor1,
             s_flavor2=Sabor2,
             s_flavor3=Sabor3)
-    
-
-# solo en local
-if __name__=='__main__':
-    app.run(debug=False)
     
