@@ -34,7 +34,7 @@ Para poder realizar una recomendación, se utilizó KNN de la librería Scikit-L
 
 Realicé una webb app en flask, con su respectivo HTML donde se puede probar el sistema de recomendación. 
 
-Para poder probar el systema, se tiene que ejecutar las lineas de codigo de "Recomendaciones con KNN.ipynb" que se encuentra en el repositorio. 
+Para poder probar el systema, se tiene que ejecutar las lineas de codigo de "Recomendacin con KNN.ipynb" que se encuentra en el repositorio. 
 
 ## Perspectivas
 
