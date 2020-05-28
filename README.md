@@ -1,6 +1,6 @@
 # **WeedTips**
 
-![](/home/sromero/Escritorio/FInal-Project-IronHack/gettyimages-1074231984-612x612.jpg)
+![](gettyimages-1074231984-612x612.jpg)
 
 
 
